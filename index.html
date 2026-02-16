@@ -1,21 +1,706 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Grounds Coffeehouse | Where Community Meets Coffee</title>
+  <title>The Grounds Coffeehouse | Fredericksburg's Favorite Local Coffee Spot</title>
+  <meta name="description"
+    content="The Grounds Coffeehouse in Stafford, VA — Fredericksburg's favorite local coffee spot. Freshly brewed artisan coffee, warm atmosphere, and event catering.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body
-  class="bg-coffee-cream text-coffee-dark font-sans selection:bg-coffee-gold selection:text-white overflow-x-hidden">
-  <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="The Grounds Coffeehouse Home">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+            <line x1="6" x2="6" y1="2" y2="4" />
+            <line x1="10" x2="10" y1="2" y2="4" />
+            <line x1="14" x2="14" y1="2" y2="4" />
+          </svg>
+        </div>
+        <span class="logo-text">The Grounds <span class="logo-accent">Coffeehouse</span></span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="nav-links-desktop">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#catering" class="nav-link">Catering</a>
+        <a href="#location" class="nav-link">Location</a>
+        <a href="#location" class="nav-cta-btn" id="visitBtnDesktop">Visit Us Today</a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#menu" class="mobile-link">Menu</a>
+      <a href="#catering" class="mobile-link">Catering</a>
+      <a href="#location" class="mobile-link">Location</a>
+      <a href="#location" class="nav-cta-btn mobile-cta">Visit Us Today</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section id="home" class="hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1501339819398-ed4751825728?auto=format&fit=crop&q=80&w=2000"
+          alt="The Grounds Coffeehouse interior" class="hero-bg-img" loading="eager">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-inner animate-fade-up">
+          <span class="hero-tag">Crafting Moments Since 2021</span>
+          <h1 class="hero-title">
+            Fredericksburg's Favorite<br>
+            <span class="hero-title-accent">Local Coffee Spot</span>
+          </h1>
+          <p class="hero-desc">
+            Freshly brewed artisan coffee, a warm atmosphere, and a cozy space to connect, work, and dream. Experience
+            the art of the perfect pour.
+          </p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn-primary">View Menu</a>
+            <a href="#location" class="btn-secondary">Visit Us</a>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-indicator" id="scrollDown" aria-label="Scroll down">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </button>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap reveal">
+            <div class="about-image-container">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200"
+                alt="Barista at work" class="about-img">
+              <div class="about-image-border"></div>
+              <div class="about-image-badge">
+                <span class="badge-text">Founded on passion for great beans.</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-text reveal">
+            <span class="section-tag">Our Story</span>
+            <h2 class="section-title">More Than Just<br><span class="title-accent">A Morning Ritual</span></h2>
+            <div class="about-paragraphs">
+              <p>At The Grounds Coffeehouse, we believe that the best conversations happen over a perfectly brewed cup.
+                Our journey started with a simple vision: to create a sanctuary where community and craft collide.</p>
+              <p>Every bean we serve is ethically sourced from sustainable farms and roasted locally in small batches to
+                preserve its unique flavor profile. Whether you're here for a quick espresso or a slow Sunday brunch,
+                you're part of the family.</p>
+              <p>Step into our space and feel the warmth of hand-poured coffee, fresh aromas, and a friendly face. We're
+                here to fuel your day and spark your creativity.</p>
+            </div>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number">10k+</span>
+                <span class="stat-label">Cups Served</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Unique Blends</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MENU ========== -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Crafted with Love</span>
+          <h2 class="section-title center">On The Menu</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-card reveal" style="--delay: 0ms">
+            <div class="menu-card-image">
+              <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&q=80&w=600"
+                alt="Signature Latte">
+              <div class="menu-price">$5.50</div>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Signature Latte</h3>
+              <p class="menu-card-desc">Our house blend espresso with velvety steamed milk and a hint of vanilla bean.
+              </p>
+              <button class="menu-order-btn">Add to Order <span class="order-line"></span></button>
+            </div>
+          </div>
+          <div class="menu-card reveal" style="--delay: 150ms">
+            <div class="menu-card-image">
+              <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&q=80&w=600"
+                alt="Cold Brew Reserve">
+              <div class="menu-price">$6.25</div>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Cold Brew Reserve</h3>
+              <p class="menu-card-desc">18-hour steep for an incredibly smooth, bold, and refreshing pick-me-up.</p>
+              <button class="menu-order-btn">Add to Order <span class="order-line"></span></button>
+            </div>
+          </div>
+          <div class="menu-card reveal" style="--delay: 300ms">
+            <div class="menu-card-image">
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=600"
+                alt="Wildflower Pastry">
+              <div class="menu-price">$4.95</div>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Wildflower Pastry</h3>
+              <p class="menu-card-desc">Flaky, buttery croissant filled with locally sourced berry compote.</p>
+              <button class="menu-order-btn">Add to Order <span class="order-line"></span></button>
+            </div>
+          </div>
+          <div class="menu-card reveal" style="--delay: 450ms">
+            <div class="menu-card-image">
+              <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=600"
+                alt="Seasonal Special">
+              <div class="menu-price">$6.75</div>
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-title">Seasonal Special</h3>
+              <p class="menu-card-desc">Honey Lavender Oat Latte — delicate, floral, and naturally sweetened.</p>
+              <button class="menu-order-btn">Add to Order <span class="order-line"></span></button>
+            </div>
+          </div>
+        </div>
+        <div class="menu-cta reveal">
+          <button class="btn-outline">Download Full Menu (PDF)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GOOGLE REVIEWS ========== -->
+    <section id="reviews" class="reviews-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Google Reviews</span>
+          <h2 class="section-title center">Loved by Our Community</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="reviews-summary reveal">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+              class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="reviews-rating-text">4.8/5 from 120+ happy customers</p>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card reveal" style="--delay: 0ms">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Absolutely the best coffee in the area! The atmosphere is so warm and inviting. I
+              bring my laptop here every morning and the baristas always remember my order. Truly a gem!"</p>
+            <div class="review-author">
+              <div class="review-avatar">S</div>
+              <div>
+                <span class="review-name">Sarah M.</span>
+                <span class="review-date">Local Guide</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card reveal" style="--delay: 150ms">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"We hired their coffee cart for our wedding and it was the highlight of the
+              reception! Professional service, incredible drinks, and our guests couldn't stop raving about it."</p>
+            <div class="review-author">
+              <div class="review-avatar">J</div>
+              <div>
+                <span class="review-name">James & Lisa R.</span>
+                <span class="review-date">Event Client</span>
+              </div>
+            </div>
+          </div>
+          <div class="review-card reveal" style="--delay: 300ms">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Finally, a coffeehouse that feels like home! The seasonal lavender latte is
+              heavenly. The staff genuinely cares about every cup they serve. This is my happy place."</p>
+            <div class="review-author">
+              <div class="review-avatar">M</div>
+              <div>
+                <span class="review-name">Maria K.</span>
+                <span class="review-date">Regular Customer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CATERING (COFFEE CART) ========== -->
+    <section id="catering" class="catering-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Event Catering</span>
+          <h2 class="section-title center italic">The Grounds Coffee Cart</h2>
+          <p class="section-subtitle">Elevate your wedding, corporate or private event with hand-crafted drinks prepared
+            by professional baristas! We are happy to bring The Grounds Coffeehouse to you with our customized coffee
+            cart.</p>
+        </div>
+
+        <div class="cart-grid reveal">
+          <div class="cart-card">
+            <div class="cart-icon">☕</div>
+            <h3 class="cart-title">Espresso Cart</h3>
+            <p class="cart-desc">Classic hot and iced lattes, cappuccinos, and flat whites.</p>
+            <div class="cart-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Included in every cart
+            </div>
+          </div>
+          <div class="cart-card">
+            <div class="cart-icon">🧊</div>
+            <h3 class="cart-title">Iced Coffee Cart</h3>
+            <p class="cart-desc">Our signature cold brew and refreshing iced favorites.</p>
+            <div class="cart-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Included in every cart
+            </div>
+          </div>
+          <div class="cart-card">
+            <div class="cart-icon">🍫</div>
+            <h3 class="cart-title">Hot Chocolate Cart</h3>
+            <p class="cart-desc">Rich, velvety cocoa with artisan toppings for cozy events.</p>
+            <div class="cart-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Included in every cart
+            </div>
+          </div>
+        </div>
+
+        <!-- Personalize Section -->
+        <div class="personalize-section reveal">
+          <div class="personalize-text">
+            <h3 class="personalize-title">Personalize Every Cup</h3>
+            <div class="personalize-features">
+              <div class="feature-row">
+                <div class="feature-icon-wrap">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+                    <path
+                      d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="feature-title">Custom Stickers</h4>
+                  <p class="feature-desc">Choose from our pre-designed wedding monograms or send us your company logo
+                    for high-impact branding on every cup.</p>
+                </div>
+              </div>
+              <div class="feature-row">
+                <div class="feature-icon-wrap">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="feature-title">Inclusive Options</h4>
+                  <p class="feature-desc">Have non-coffee drinkers? We've got you covered with premium chai lattes and
+                    hot chocolate options for everyone to enjoy.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="personalize-image">
+            <img src="https://images.unsplash.com/photo-1525648199074-cee30ba79a4a?auto=format&fit=crop&q=80&w=1200"
+              alt="Coffee Cart Experience" loading="lazy">
+            <div class="personalize-quote">"Professional baristas,<br>exceptional service."</div>
+          </div>
+        </div>
+
+        <!-- Quote Form -->
+        <div id="quote-form" class="quote-form-section reveal">
+          <div class="quote-form-grid">
+            <div class="quote-info">
+              <h3 class="quote-info-title">Get a Quote for Your Event</h3>
+              <p class="quote-info-desc">Give us a little more information about your event and we'd love to provide a
+                customized proposal!</p>
+              <div class="quote-contact">
+                <div class="quote-contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" x2="11" y1="2" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9" />
+                  </svg>
+                </div>
+                <span>thegroundsva@gmail.com</span>
+              </div>
+              <div class="quote-note">
+                <span class="quote-note-label">Note</span>
+                <p>Submission of this form does not confirm a booking.</p>
+              </div>
+            </div>
+            <div class="quote-form">
+              <form>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>First Name *</label>
+                    <input type="text" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Last Name *</label>
+                    <input type="text" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Email *</label>
+                  <input type="email" required>
+                </div>
+                <div class="form-row-3">
+                  <div class="form-group">
+                    <label>Event Type</label>
+                    <select>
+                      <option>Wedding</option>
+                      <option>Corporate</option>
+                      <option>Private Party</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Date of Event</label>
+                    <input type="date">
+                  </div>
+                  <div class="form-group">
+                    <label>Guest Count</label>
+                    <input type="number" placeholder="e.g. 150">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Interested In</label>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox"><span class="checkbox-custom"></span> Espresso
+                      Cart</label>
+                    <label class="checkbox-label"><input type="checkbox"><span class="checkbox-custom"></span> Iced
+                      Coffee Cart</label>
+                    <label class="checkbox-label"><input type="checkbox"><span class="checkbox-custom"></span> Hot
+                      Chocolate Cart</label>
+                    <label class="checkbox-label"><input type="checkbox"><span class="checkbox-custom"></span> Custom
+                      Stickers</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Event Location (Address)</label>
+                  <input type="text" placeholder="Address, City, State, ZIP" required>
+                </div>
+                <div class="form-group">
+                  <label>Additional Details</label>
+                  <textarea rows="3" placeholder="Tell us more about your vision..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary form-submit-btn">Submit Quote Request</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section reveal">
+          <h3 class="faq-title">Commonly Asked Questions</h3>
+          <div class="faq-list" id="faqList">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Can I get a custom quote for my particular event?</span>
+                <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>Absolutely! Please fill out our contact form below with a little more information and we will reach
+                  out to chat more. Just because you're filling out the form doesn't mean you're booking. We will help
+                  guide you by asking questions, showing you the options and then sending you a customized proposal.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Are the drinks really unlimited?</span>
+                <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>Yes! Your guests can have as many beverages as they'd like during the duration of your service.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What fees do you charge in addition to the price of the catering service?</span>
+                <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>None. What you see in your quote is what you pay; everything is included in that price: set-up,
+                  clean-up, additional baristas, and non-dairy milk options. The only exception might be if we need to
+                  travel more than 25 miles from our shop, but any additional fees will also be included in the quote.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What condiments do you provide?</span>
+                <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>Of course, we think our coffee is delicious as is! But, we also know that people like having milk,
+                  sweeteners, and sugar as options, which we always provide.</p>
+              </div>
+            </div>
+          </div>
+          <p class="faq-footer">Have a question we didn't cover? <a href="mailto:thegroundsva@gmail.com">Email us
+              here.</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GALLERY ========== -->
+    <section id="gallery" class="gallery-section">
+      <div class="container-wide">
+        <div class="section-header reveal">
+          <span class="section-tag">The Vibe</span>
+          <h2 class="section-title center italic">Moments in The Grounds</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal" style="--delay: 0ms">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800"
+              alt="Coffee shop gallery 1" loading="lazy">
+            <div class="gallery-overlay"><span>View Story</span></div>
+          </div>
+          <div class="gallery-item reveal" style="--delay: 100ms">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800"
+              alt="Coffee shop gallery 2" loading="lazy">
+            <div class="gallery-overlay"><span>View Story</span></div>
+          </div>
+          <div class="gallery-item reveal" style="--delay: 200ms">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800"
+              alt="Coffee shop gallery 3" loading="lazy">
+            <div class="gallery-overlay"><span>View Story</span></div>
+          </div>
+          <div class="gallery-item reveal" style="--delay: 300ms">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=800"
+              alt="Coffee shop gallery 4" loading="lazy">
+            <div class="gallery-overlay"><span>View Story</span></div>
+          </div>
+          <div class="gallery-item reveal" style="--delay: 400ms">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800"
+              alt="Coffee shop gallery 5" loading="lazy">
+            <div class="gallery-overlay"><span>View Story</span></div>
+          </div>
+          <div class="gallery-item reveal" style="--delay: 500ms">
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=800"
+              alt="Coffee shop gallery 6" loading="lazy">
+            <div class="gallery-overlay"><span>View Story</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LOCATION ========== -->
+    <section id="location" class="location-section">
+      <div class="container">
+        <div class="location-grid">
+          <div class="location-info reveal">
+            <span class="section-tag">Visit Us</span>
+            <h2 class="section-title italic">Your Local Sanctuary</h2>
+            <div class="location-details">
+              <div class="location-row">
+                <div class="location-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Our Address</h4>
+                  <p>50 N Stafford Complex Ctr #107<br>Stafford, VA 22556</p>
+                </div>
+              </div>
+              <div class="location-row">
+                <div class="location-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Opening Hours</h4>
+                  <ul class="hours-list">
+                    <li><span>Mon - Fri:</span><strong>7AM - 5PM</strong></li>
+                    <li><span>Sat - Sun:</span><strong>8AM - 4PM</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="location-row">
+                <div class="location-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Contact</h4>
+                  <p>(540) 288-2058</p>
+                  <p>hello@thegroundsva.com</p>
+                </div>
+              </div>
+            </div>
+            <a href="https://maps.app.goo.gl/3y2frE9MMCegZFq1A" target="_blank" rel="noopener noreferrer"
+              class="btn-dark">Get Directions</a>
+          </div>
+          <div class="location-map reveal">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.281696472651!2d-77.41094388466632!3d38.4232306796468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b6623635a676b7%3A0x7d67b8178d7e9894!2sThe%20Grounds%20Coffeehouse!5e0!3m2!1sen!2sus!4v1645000000000!5m2!1sen!2sus"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Google Maps - The Grounds Coffeehouse">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+                <line x1="6" x2="6" y1="2" y2="4" />
+                <line x1="10" x2="10" y1="2" y2="4" />
+                <line x1="14" x2="14" y1="2" y2="4" />
+              </svg>
+            </div>
+            <span class="logo-text">The Grounds</span>
+          </div>
+          <p class="footer-desc">Elevating the coffee experience through craftsmanship and community. Every cup tells a
+            story of quality and passion.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#menu">The Menu</a></li>
+            <li><a href="#location">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-links">
+            <li><a href="#">Local Artists</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Wholesale</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="footer-newsletter-desc">Join our list for brewing tips and exclusive offers.</p>
+          <div class="newsletter-input">
+            <input type="email" placeholder="Your email">
+            <button>Join</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 The Grounds Coffeehouse. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <p class="footer-credit">Concept Website Design by Walid</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
